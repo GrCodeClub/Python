@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://httpbin.org/post'
+url = 'https://grcodeclub.gr/post'
 data = {'key': 'value'}
 response = requests.post(url, data=data)
 print(response.status_code)
