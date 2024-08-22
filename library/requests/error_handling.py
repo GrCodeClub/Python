@@ -1,3 +1,4 @@
+# Χειρισμός σφαλμάτων
 import requests
 
 try:
