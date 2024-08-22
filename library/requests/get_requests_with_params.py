@@ -1,3 +1,4 @@
+# GET αίτημα με παραμέτρους
 import requests
 
 params = {'param1': 'value1', 'param2': 'value2'}
