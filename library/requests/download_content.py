@@ -1,3 +1,4 @@
+# Λήψη περιεχομένου αρχείου
 import requests
 
 url = 'https://www.grcodeclub.gr/somefile.zip'
