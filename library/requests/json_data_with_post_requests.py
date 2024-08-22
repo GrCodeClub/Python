@@ -1,3 +1,4 @@
+# Αποστολή JSON δεδομένων με POST αίτημα
 import requests
 import json
 
