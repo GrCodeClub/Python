@@ -1,3 +1,4 @@
+# Απλό POST αίτημα
 import requests
 
 url = 'https://grcodeclub.gr/post'
