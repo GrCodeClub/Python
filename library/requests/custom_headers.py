@@ -2,7 +2,7 @@
 
 import requests
 
-url = 'https://httpbin.org/headers'
+url = 'https://grcodeclub.gr/headers'
 headers = {'User-Agent': 'my-app'}
 response = requests.get(url, headers=headers)
 print(response.status_code)
