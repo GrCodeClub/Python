@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/python.png"/>
+        <meta property="og:title" content="Γλώσσα προγραμματισμού Python και Λίστες">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                <a href="https://grcodeclub.gr/python"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+                    <h1 class="title">Λίστες</h1>
+
+                    <h3 class="highlight_black">Ανάγνωση (Read)</h3>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r")  # Άνοιγμα για ανάγνωση
+content = file.read()
+print(content)
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Ανάγνωση Γραμμών</h3>
+                    <p>readline(): Διαβάζει μία γραμμή τη φορά.<br>
+                       readlines(): Διαβάζει όλες τις γραμμές και τις επιστρέφει ως λίστα.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r")
+line = file.readline()
+lines = file.readlines()
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Εγγραφή σε Αρχείο (Write)</h3>
+                    <p>Ανοίγει το αρχείο για εγγραφή. Αν το αρχείο υπάρχει, διαγράφει το περιεχόμενο και ξεκινάει με νέο περιεχόμενο. Αν δεν υπάρχει, το δημιουργεί.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "w")  # Άνοιγμα αρχείου για εγγραφή
+file.write("Hello, World!")
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Κλείσιμο Αρχείου (Close)</h3>
+                    <p>Πρέπει <u>πάντα να κλείνεις</u> το αρχείο αφού τελειώσεις μαζί του, για να απελευθερωθούν οι πόροι.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r")
+# Διαχείριση του αρχείου
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Χρήση του with για αυτόματο κλείσιμο</h3>
+                    <p>Η χρήση του with κλείνει αυτόματα το αρχείο όταν η εργασία ολοκληρωθεί.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+# Το αρχείο κλείνει αυτόματα εδώ</code></pre></div></div>
+
+                    <h3 class="highlight_black">Προσθήκη σε Αρχείο (Append)</h3>
+                    <p>Η λειτουργία append χρησιμοποιείται για την προσθήκη δεδομένων στο τέλος ενός αρχείου.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "a")  # Άνοιγμα αρχείου για προσθήκη
+file.write("\nΠροσθήκη νέας γραμμής")
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Δημιουργία Νέου Αρχείου (Exclusive Creation)</h3>
+                    <p>Δημιουργεί το αρχείο και το ανοίγει για εγγραφή. Αν το αρχείο υπάρχει ήδη, θα προκληθεί σφάλμα.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("newfile.txt", "x")  # Δημιουργία νέου αρχείου
+file.write("This is a new file.")
+file.close()</code></pre></div></div>
+
+
+                    <h3 class="highlight_black">Ανάγνωση δυαδικού αρχείου</h3>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("image.png", "rb")  # Δυαδική ανάγνωση
+content = file.read()
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Εγγραφή σε δυαδικό αρχείο</h3>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("newimage.png", "wb")  # Δυαδική εγγραφή
+file.write(content)  # content μπορεί να είναι δεδομένα δυαδικής μορφής
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Text</h3>
+                    <p>Ανοίγει το αρχείο σε κειμενική μορφή (προεπιλογή). Συνήθως δεν χρειάζεται να προσθέσεις αυτό το mode, καθώς είναι η προεπιλεγμένη συμπεριφορά, αλλά μπορεί να χρησιμοποιηθεί συνδυαστικά με άλλες λειτουργίες όπως 'rt', 'wt', κ.λπ.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "rt")  # Κειμενική ανάγνωση (ίδιο με το "r")
+content = file.read()
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Ανάγνωση και Εγγραφή (Update)</h3>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r+")  # Ανάγνωση και εγγραφή
+content = file.read()
+file.write("\nAdding a new line after reading.")
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Δημιουργία και εγγραφή με ανάγνωση</h3>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "w+")  # Δημιουργία/εγγραφή και ανάγνωση
+file.write("Starting fresh with new content.")
+file.seek(0)  # Μετακίνηση στην αρχή του αρχείου
+print(file.read())  # Ανάγνωση του νέου περιεχομένου
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Προσθήκη και Ανάγνωση (Append and Read)</h3>
+                    <p>Ανοίγει το αρχείο για προσθήκη και ανάγνωση. Αν το αρχείο δεν υπάρχει, το δημιουργεί.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "a+")  # Προσθήκη και ανάγνωση
+file.write("\nAppending another line.")
+file.seek(0)  # Μετακίνηση στην αρχή του αρχείου για ανάγνωση
+print(file.read())
+file.close()</code></pre></div></div>
+              
+                    <h3 class="highlight_black">Εγγραφή και Ανάγνωση (Write and Read)</h3>
+                    <p>Ανοίγει το αρχείο για εγγραφή και ανάγνωση. Διαγράφει το υπάρχον περιεχόμενο του αρχείου, αν υπάρχει.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "w+")  # Εγγραφή και ανάγνωση
+file.write("Overwriting content.")
+file.seek(0)
+print(file.read())
+file.close()</code></pre></div></div>
+
+                    <h3 class="highlight_black">Δημιουργία Νέου Αρχείου και Ανάγνωση (Exclusive Creation and Read)</h3>
+                    <p>Δημιουργεί το αρχείο για εγγραφή και ανάγνωση. Αν το αρχείο υπάρχει ήδη, προκαλεί σφάλμα.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("newfile.txt", "x+")  # Δημιουργία νέου αρχείου για εγγραφή και ανάγνωση
+file.write("This is a new file with read/write access.")
+file.seek(0)
+print(file.read())
+file.close()</code></pre></div></div>
+
+                  </div><!-- Τέλος Background Κειμένου-->
+            </div> <!--Τέλος Κειμένου-->
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>
