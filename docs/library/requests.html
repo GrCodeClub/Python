@@ -14,29 +14,29 @@
                 <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
                     <h1 class="title">Requests</h1>
 
-                    <h3 class="highlight_black">Εγκατάσταση</h3>
+                    <h3 class="highlight">Εγκατάσταση</h3>
                     <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">pip install requests</code></pre></div>                
 
-                    <h3 class="highlight_black">Εισαγωγή</h3>
+                    <h3 class="highlight">Εισαγωγή</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">import requests</code></pre></div></div>
 
-                    <h3 class="highlight_black">GET Αίτημα</h3>
+                    <h3 class="highlight">GET Αίτημα</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">response = requests.get('https://api.github.com')
 print(response.status_code)  # Κατάσταση HTTP (π.χ., 200, 404)
 print(response.text)         # Περιεχόμενο της απάντησης ως string</code></pre></div></div>
 
-                    <h3 class="highlight_black">POST Αίτημα</h3>
+                    <h3 class="highlight">POST Αίτημα</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">url = 'https://httpbin.org/post'
 data = {'key': 'value'}
 response = requests.post(url, data=data)
 print(response.json())  # Επιστρέφει το JSON περιεχόμενο της απάντησης</code></pre></div></div>
 
-                    <h3 class="highlight_black">Παράμετροι GET Αιτήματος</h3>
+                    <h3 class="highlight">Παράμετροι GET Αιτήματος</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">params = {'param1': 'value1', 'param2': 'value2'}
 response = requests.get('https://httpbin.org/get', params=params)
 print(response.json())</code></pre></div></div>
 
-                    <h3 class="highlight_black">Δεδομένα POST Αιτήματος ως JSON</h3>
+                    <h3 class="highlight">Δεδομένα POST Αιτήματος ως JSON</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">import json
 url = 'https://httpbin.org/post'
 headers = {'Content-Type': 'application/json'}
@@ -44,46 +44,46 @@ json_data = {'key': 'value'}
 response = requests.post(url, headers=headers, data=json.dumps(json_data))
 print(response.json())</code></pre></div></div>
 
-                    <h3 class="highlight_black">Βασική Αυθεντικοποίηση</h3>
+                    <h3 class="highlight">Βασική Αυθεντικοποίηση</h3>
                     <p>Αποστέλλει αίτημα με όνομα χρήστη και κωδικό.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">from requests.auth import HTTPBasicAuth
 url = 'https://httpbin.org/basic-auth/user/pass'
 response = requests.get(url, auth=HTTPBasicAuth('user', 'pass'))
 print(response.json())</code></pre></div></div>
 
-                    <h3 class="highlight_black">Λήψη Αρχείων</h3>
+                    <h3 class="highlight">Λήψη Αρχείων</h3>
                     <p>Κατεβάζει ένα αρχείο από έναν URL</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">url = 'https://www.example.com/somefile.zip'
 response = requests.get(url)
 with open('somefile.zip', 'wb') as file:
     file.write(response.content)</code></pre></div></div>
 
-                    <h3 class="highlight_black">Χρόνος Αναμονής (Timeout)</h3>
+                    <h3 class="highlight">Χρόνος Αναμονής (Timeout)</h3>
                     <p>Ορίζει το μέγιστο χρόνο αναμονής για μια αίτηση</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">response = requests.get('https://api.github.com', timeout=5)  # 5 δευτερόλεπτα</code></pre></div></div>
 
-                    <h3 class="highlight_black">Request and Response Objects</h3>
+                    <h3 class="highlight">Request and Response Objects</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">response = requests.get('https://httpbin.org/get')
 print(response.request.method)  # Μέθοδος αιτήματος (GET)
 print(response.status_code)     # Κατάσταση HTTP
 print(response.headers)         # Headers της απάντησης
 print(response.text)            # Περιεχόμενο της απάντησης</code></pre></div></div>
 
-                    <h3 class="highlight_black">SSL Cert Verification</h3>
+                    <h3 class="highlight">SSL Cert Verification</h3>
                     <p>Η requests βιβλιοθήκη ελέγχει αυτόματα τα SSL certificates για την ασφάλεια των συνδέσεων. Μπορείς να απενεργοποιήσεις την επαλήθευση, αν χρειαστεί (αν και αυτό δεν συνιστάται για παραγωγικό περιβάλλον)</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">response = requests.get('https://self-signed.badssl.com/', verify=False)</code></pre></div></div>
 
-                    <h3 class="highlight_black">Keep-Alive</h3>
+                    <h3 class="highlight">Keep-Alive</h3>
                     <p>Η requests βιβλιοθήκη υποστηρίζει την σύνδεση Keep-Alive για να διατηρεί ανοιχτές συνδέσεις HTTP για πολλαπλά αιτήματα.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python"># Χρησιμοποιώντας Session για Keep-Alive
 session = requests.Session()
 response = session.get('https://httpbin.org/get')</code></pre></div></div>
 
-                    <h3 class="highlight_black">Streaming Uploads</h3>
+                    <h3 class="highlight">Streaming Uploads</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">with open('large_file.zip', 'rb') as f:
     response = requests.post('https://httpbin.org/post', data=f)</code></pre></div></div>
 
-                        <h3 class="highlight_black">Παραδείγματα</h3>
+                        <h3 class="highlight">Παραδείγματα</h3>
                     <label style="margin-left: 10px;">Διάλεξε αρχείο</label>
                     <select id="code" name="code" style=" color: white; border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none; font-size: 18px; outline: none; cursor: pointer;">
                         <option value="-">Επιλέξτε</option>

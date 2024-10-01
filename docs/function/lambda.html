@@ -20,7 +20,7 @@
                             <li>Δεν μπορούν να περιλαμβάνουν εντολές όπως if, for, while, κ.λπ. (αν και μπορεί να χρησιμοποιηθεί σύντομος if-else μέσα σε μια έκφραση).</li>
                         </ol>
                     </p>
-                    <h3 class="highlight_black">Βασική Σύνταξη lambda</h3>
+                    <h3 class="highlight">Βασική Σύνταξη lambda</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">lambda arguments: expression</code></pre></div></div>
                     <p><ol>
                         <li>arguments: Μπορεί να είναι μηδέν ή περισσότερα ορίσματα (arguments), όπως σε μια κανονική συνάρτηση</li>
@@ -32,21 +32,21 @@ add = lambda x, y: x + y
 result = add(2, 3)
 print(result)  # Εκτυπώνει 5</code></pre></div></div>
 
-                    <h3 class="highlight_black">Χρήση lambda με map()</h3>
+                    <h3 class="highlight">Χρήση lambda με map()</h3>
                     <p>Η map() εφαρμόζει μια συνάρτηση σε κάθε στοιχείο μιας ακολουθίας (όπως μια λίστα) και επιστρέφει έναν νέο επεξεργασμένο κατάλογο.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">numbers = [1, 2, 3, 4, 5]
 # Χρήση της map() για να προσθέσουμε 10 σε κάθε αριθμό της λίστας
 new_numbers = list(map(lambda x: x + 10, numbers))
 print(new_numbers)  # Εκτυπώνει [11, 12, 13, 14, 15]</code></pre></div></div>
 
-                    <h3 class="highlight_black">Χρήση lambda με filter()</h3>
+                    <h3 class="highlight">Χρήση lambda με filter()</h3>
                     <p>Η filter() φιλτράρει τα στοιχεία μιας λίστας σύμφωνα με μια συνθήκη που καθορίζεται από τη συνάρτηση που δίνεται.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Χρήση της filter() για να κρατήσουμε μόνο τους ζυγούς αριθμούς
 even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
 print(even_numbers)  # Εκτυπώνει [2, 4, 6, 8, 10]</code></pre></div></div>
 
-                    <h3 class="highlight_black">Χρήση lambda με reduce()</h3>
+                    <h3 class="highlight">Χρήση lambda με reduce()</h3>
                     <p>Η reduce() συνδυάζει όλα τα στοιχεία μιας ακολουθίας σε μια μόνο τιμή χρησιμοποιώντας μια συνάρτηση. Για να χρησιμοποιήσεις τη reduce(), χρειάζεται να εισάγεις το functools module.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">from functools import reduce
 numbers = [1, 2, 3, 4, 5]
@@ -54,7 +54,7 @@ numbers = [1, 2, 3, 4, 5]
 product = reduce(lambda x, y: x * y, numbers)
 print(product)  # Εκτυπώνει 120 (1 * 2 * 3 * 4 * 5)</code></pre></div></div>
 
-                    <h3 class="highlight_black">Χρήση lambda μέσα σε sorted() και sort()</h3>
+                    <h3 class="highlight">Χρήση lambda μέσα σε sorted() και sort()</h3>
                     <p>Μπορείς να χρησιμοποιήσεις lambda συνάρτηση ως το key όρισμα στις εντολές sorted() και sort() για να καθορίσεις τη λογική ταξινόμησης.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">students = [
     {"name": "John", "grade": 90},
@@ -66,7 +66,7 @@ sorted_students = sorted(students, key=lambda student: student['grade'])
 print(sorted_students)
 # Εκτυπώνει [{'name': 'Jane', 'grade': 85}, {'name': 'John', 'grade': 90}, {'name': 'Dave', 'grade': 92}]</code></pre></div></div>
 
-                    <h3 class="highlight_black">Φιλτράρισμα και Μετασχηματισμός Δεδομένων</h3>
+                    <h3 class="highlight">Φιλτράρισμα και Μετασχηματισμός Δεδομένων</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">data = [
     {"name": "Alice", "age": 30},
     {"name": "Bob", "age": 25},
@@ -76,7 +76,7 @@ print(sorted_students)
 names = list(map(lambda x: x['name'], filter(lambda x: x['age'] > 30, data)))
 print(names)  # Εκτυπώνει ['Charlie']</code></pre></div></div>
 
-                    <h3 class="highlight_black">Χρήση lambda σε sorted() με πολλαπλά κριτήρια</h3>
+                    <h3 class="highlight">Χρήση lambda σε sorted() με πολλαπλά κριτήρια</h3>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">people = [
     {"name": "Alice", "age": 30, "height": 160},
     {"name": "Bob", "age": 25, "height": 175},

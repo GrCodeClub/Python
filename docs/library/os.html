@@ -16,18 +16,18 @@
                     <p>
                         Το  os στην Python παρέχει πολλές λειτουργίες για τον έλεγχο και τη διαχείριση του λειτουργικού συστήματος. 
                     </p>
-                    <h3 class="highlight_black">Εισαγωγή Βιβλιοθήκης</h3>
+                    <h3 class="highlight">Εισαγωγή Βιβλιοθήκης</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os</code></pre></div></div>
 
-                    <h3 class="highlight_black">Εμφάνιση τρέχων κατάλογος</h3>
+                    <h3 class="highlight">Εμφάνιση τρέχων κατάλογος</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 directory = os.getcwd()
 print("Ο τρέχων κατάλογος είναι:", directory)</code></pre></div></div>
 
 
-                    <h3 class="highlight_black">Λίστα αρχείων και φακέλων σε έναν κατάλογο</h3>
+                    <h3 class="highlight">Λίστα αρχείων και φακέλων σε έναν κατάλογο</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 dir_path = "./"
@@ -36,7 +36,7 @@ files = os.listdir(dir_path)
 for item in files:
     print(item)</code></pre></div></div>
 
-                    <h3 class="highlight_black">Δημιουργία φακέλου</h3>
+                    <h3 class="highlight">Δημιουργία φακέλου</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 dir_name = "name_dir"
@@ -44,14 +44,14 @@ dir_name = "name_dir"
 os.mkdir(dir_name)
 </code></pre></div></div>
 
-                    <h3 class="highlight_black">Διαγραφή φακέλου (με περιεχόμενο)</h3>
+                    <h3 class="highlight">Διαγραφή φακέλου (με περιεχόμενο)</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 dir_name = "name_dir"
 # Διαγραφή του φακέλου και του περιεχομένου του
 os.rmdir(dir_name)</code></pre></div></div>
 
-                    <h3 class="highlight_black">Ελέγχος ύπαρξης ενός αρχείου ή φακέλου</h3>
+                    <h3 class="highlight">Ελέγχος ύπαρξης ενός αρχείου ή φακέλου</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 path_to_check = "./name_dir"
@@ -60,14 +60,14 @@ if os.path.exists(path_to_check):
 else:
     print(f"{path_to_check} δεν υπάρχει.")</code></pre></div></div>
 
-                    <h3 class="highlight_black">Αλλαγή του ονόματος ενός αρχείου ή φακέλου</h3>
+                    <h3 class="highlight">Αλλαγή του ονόματος ενός αρχείου ή φακέλου</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 old_name = "old_name.txt"
 new_name = "new_name.txt"
 os.rename(old_name, new_name)</code></pre></div></div>
 
-                    <h3 class="highlight_black">Εκτέλεση ενός εξωτερικού προγράμματος ή command</h3>
+                    <h3 class="highlight">Εκτέλεση ενός εξωτερικού προγράμματος ή command</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 command_to_run = "dir"  # Παράδειγμα ενός Windows command
@@ -79,14 +79,14 @@ else:
     print(f"Η εντολή {command_to_run} απέτυχε με κωδικό εξόδου {result}.")
 </code></pre></div></div>
 
-                    <h3 class="highlight_black">Εύρεση του path ενός αρχείου ή Φακέλου</h3>
+                    <h3 class="highlight">Εύρεση του path ενός αρχείου ή Φακέλου</h3>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
 name = "name_dir"
 path = os.path.abspath(name)
 print(f"Το path του {name} είναι: {path}")</code></pre></div></div>
 
-                    <h3 class="highlight_black">Διεργασίες </h3>
+                    <h3 class="highlight">Διεργασίες </h3>
                     <p>Windows</p>
                     <div class="bg_preview">
                     <div  class="line-numbers"><pre class="code_editor"><code class="language-python">import os
