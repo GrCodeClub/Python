@@ -1,46 +1,40 @@
-<html>
-    <head>
-        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
-        <meta property="og:title" content="Γλώσσα προγραμματισμού Python | Terminal">
-        <script src="https://grcodeclub.github.io/js/add/data.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="GrCode Club | Docker">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Python3 | Terminal</h1>
 
-    <body>
-        <div class="container">
-            <div id="add_headder_and_menu"></div>
+        <h3 class="highlight">Web Server</h3>
+        <p>Δημιουργήστε έναν HTTP Server</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -m http.server 8000</code></pre></div>               
+        <p>Για να εκκινήσετε τον HTTP server στην διεύθυνση IP του υπολογιστή σας, μπορείτε να καθορίσετε την επιθυμητή διεύθυνση IP ως όρισμα της εντολής.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -m http.server --bind 192.168.1.1</code></pre></div>                
         
-        <div class="Text"> <!--ΑΡΧΗ Text-->
-          <a href="./"><h1 id="back_page"></h1></a>
-            <div class="text_bg">
-            <h1 class="title">Python3 | Terminal</h1>
-
-            <h3 class="highlight">Web Server</h3>
-            <p>Δημιουργήστε έναν HTTP Server</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -m http.server 8000</code></pre></div>               
-            <p>Για να εκκινήσετε τον HTTP server στην διεύθυνση IP του υπολογιστή σας, μπορείτε να καθορίσετε την επιθυμητή διεύθυνση IP ως όρισμα της εντολής.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -m http.server --bind 192.168.1.1</code></pre></div>                
-            
-            <h3 class="highlight">Convert</h3>
-            <p>Μετατροπή από δεκαδικό σε άλλα αριθμητικά συστήματα</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -c 'print(bin(42), oct(42), hex(42))'</code></pre></div>                
-            <p>Μετατροπή από δυαδικό σε δεκαδικό</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -c 'print(int("1101", 2))'</code></pre></div>                
-            <p>Μετατροπή από άλλα αριθμητικά συστήματα σε δεκαδικό</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -c 'print(int("1010", 2), int("52", 8), int("1A", 16))'</code></pre></div>                
-            <p>Base64</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">echo -n "Hello, World!" | python -m base64
+        <h3 class="highlight">Convert</h3>
+        <p>Μετατροπή από δεκαδικό σε άλλα αριθμητικά συστήματα</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -c 'print(bin(42), oct(42), hex(42))'</code></pre></div>                
+        <p>Μετατροπή από δυαδικό σε δεκαδικό</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -c 'print(int("1101", 2))'</code></pre></div>                
+        <p>Μετατροπή από άλλα αριθμητικά συστήματα σε δεκαδικό</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python3 -c 'print(int("1010", 2), int("52", 8), int("1A", 16))'</code></pre></div>                
+        <p>Base64</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">echo -n "Hello, World!" | python -m base64
 echo -n "SGVsbG8sIFdvcmxkIQ==" | python -m base64 -d</code></pre></div>
 
-            <h3 class="highlight">Μετατροπή αρχείων</h3>
-            <p><u>XML</u><br>Το module xml.etree.ElementTree μπορεί να χρησιμοποιηθεί για τη μετατροπή αρχείων XML σε Python δομές δεδομένων και αντίστροφα.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python -m xml.etree.ElementTree my_xml_file.xml</code></pre></div>                
-            <p>Μετατροπή αρχείων Markdown σε HTML</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python -m markdown2 input.md > output.html</code></pre></div>                
-        </div>
-        </div> <!--ΤΕΛΟΣ Text-->
-
-    </div> <!--ΤΕΛΟΣ container-->
-        <footer id="addFooter"></footer> <!-- Footer -->
-
-    </body>
+        <h3 class="highlight">Μετατροπή αρχείων</h3>
+        <p><u>XML</u><br>Το module xml.etree.ElementTree μπορεί να χρησιμοποιηθεί για τη μετατροπή αρχείων XML σε Python δομές δεδομένων και αντίστροφα.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python -m xml.etree.ElementTree my_xml_file.xml</code></pre></div>                
+        <p>Μετατροπή αρχείων Markdown σε HTML</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">python -m markdown2 input.md > output.html</code></pre></div>     
+    </div>
+    <div id="addFooter"></div>
+</body>
 </html>
