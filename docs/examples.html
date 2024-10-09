@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
-  <meta property="og:title" content="Γλώσσα Προγραμματισμού Python">
-  <title>GrCode Club</title>
-  <script src="https://grcodeclub.gr/js/data.js"></script></head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού Python">
+      <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
 <body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Παραδείγματα</h1>
 
-<div class="container mt-5">
-  <label for="code" class="form-label">Επιλογή Κώδικα</label>
-  <select class="form-select" name="code" id="code">
-    <option value="-">Επιλέξτε</option>
-    <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/SelectionSort.py">SelectionSort.py</option>
-    <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/library%20/platform.py">platform.py</option>
-    <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/InsertionSort.py">InsertionSort.py</option>
-  </select>
-</div>
-
-
-<script>
-  $(document).ready(function() {
-    $('#page-select').select2();
-  });
-</script>
-
+        <label>Επιλογή Κώδικα</label>
+        <select id="code">
+            <option value="-">Επιλέξτε</option>
+            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/SelectionSort.py">SelectionSort.py</option>
+            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/library%20/platform.py">platform.py</option>
+            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/InsertionSort.py">InsertionSort.py</option>
+                </select>
+    
+        <br><br>
+        <div class="bg_preview">
+            <div class="appearance">
+                <div class="space">
+                    <div class="buttons1"> </div>
+                    <div class="buttons2"> </div>
+                    <div class="buttons3"></div>
+                </div>
+                <div id="name"></div>
+            </div>
+            <div id="load">  </div>
+        </div>
+    </div>
+    <div id="addFooter"></div>
 </body>
 </html>
