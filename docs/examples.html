@@ -11,12 +11,12 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Παραδείγματα | Python</h1>
-        <label style="margin-left: 10px;">Διάλεξε αρχείο</label>
-        <select id="code" name="code" style="color: white; border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none; font-size: 18px; outline: none; cursor: pointer;">
+        <label for="page-select" class="form-label">Περιεχόμενα :</label>
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="-">Επιλέξτε</option>
             <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/library%20/platform.py">platform.py</option>
             <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/SelectionSort.py">SelectionSort.py</option>
-            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/InsertionSort.py">InsertionSort.py</option>
+            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/InsertionSort.py">InsertionSort.py</option>   
         </select>
         <br><br>
         <div class="bg_preview">
@@ -32,5 +32,14 @@
         </div>
     </div>
     <div id="addFooter"></div>
+
+    <script>
+              $(document).ready(function() {
+            // Εφαρμογή του Select2
+            $('#page-select').select2();
+          
+        });
+            
+    </script>
 </body>
 </html>
