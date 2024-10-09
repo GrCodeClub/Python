@@ -2,37 +2,60 @@
 <html lang="el">
 <head>
     <meta charset="UTF-8">
-    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
-    <meta property="og:title" content="Γλώσσα Προγραμματισμού Python">
-      <title>GrCode Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Clone</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://grcodeclub.gr/js/data.js"></script>
 </head>
 <body>
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Παραδείγματα</h1>
+        <div>
+            <input type="text" id="search-input" placeholder="Αναζήτηση παραδειγμάτων..." class="form-control"  oninput="filterRepos()">
+        </div>
+        <ul id="repo-list"></ul>
 
-        <label>Επιλογή Κώδικα</label>
-        <select id="code">
-            <option value="-">Επιλέξτε</option>
-            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/SelectionSort.py">SelectionSort.py</option>
-            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/library%20/platform.py">platform.py</option>
-            <option value="https://raw.githubusercontent.com/dimitridedou/python-codes/main/sort/InsertionSort.py">InsertionSort.py</option>
-                </select>
-    
-        <br><br>
-        <div class="bg_preview">
-            <div class="appearance">
-                <div class="space">
-                    <div class="buttons1"> </div>
-                    <div class="buttons2"> </div>
-                    <div class="buttons3"></div>
-                </div>
-                <div id="name"></div>
+        <!-- Νέα περιοχή για να εμφανίζονται οι λεπτομέρειες του repository -->
+        <div id="repo-details" style="display:none;">
+            <h3 id="repo-name"></h3>
+            <p id="repo-description"></p>
+            <div style="width: 100%;">
+                <button class="btn btn-dark"  style="width: 100%;" onclick="goBack()">Πίσω</button>
+            <ul id="file-list" style="width: 100%;"></ul>
             </div>
-            <div id="load">  </div>
         </div>
     </div>
     <div id="addFooter"></div>
+    <script>
+        const repos = [
+    {
+        name: 'Bιβλιοθήκες',
+        description: '-', // Περιγραφή για το κύριο repo
+        files: [],
+        subRepos: [
+            {
+                name: 'Requests',
+                description: 'Περιγραφή του sub-repo-1',
+                files: [
+                { name: 'Chunk Encoded Requests', link: 'https://raw.githubusercontent.com/grcodeclub/python/refs/heads/main/library/requests/Chunk-Encoded_Requests.py' },
+                { name: 'Custom Headers', link: 'https://raw.githubusercontent.com/grcodeclub/python/refs/heads/main/library/requests/custom_headers.py' }
+                ]
+            }
+        ]
+    },
+    {
+        name: 'Strings',
+        description: '-', // Περιγραφή για το κύριο repo
+        files: [
+        { name: 'Αφαίρεση κενών', link: 'https://raw.githubusercontent.com/grcodeclub/python/refs/heads/main/strings/Αφαίρεση_κενών.py' },
+                { name: 'Συγχώνευση λίστα σε string', link: 'https://raw.githubusercontent.com/grcodeclub/python/refs/heads/main/strings/Συγχώνευση_λίστας_σε_string.py' }
+         
+        ],
+        subRepos: []
+    }
+];
+
+    </script>
 </body>
 </html>
