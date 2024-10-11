@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
+    <meta charset="UTF-8">
     <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
-    <meta property="og:title" content="GrCode Club | Γλώσσα προγραμματισμού Python">    <title>GrCode Club</title>
-    <script src="https://grcodeclub.gr/js/data.js"></script>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού Python">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
 </head>
 <body>
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Python</h1>
-                    <p>Η Python είναι μια γλώσσα προγραμματισμού υψηλού επιπέδου.</p>
-                    <h3 class="highlight">Εγκατάσταση</h3>
-                    <p>Windows <u><a href="https://www.python.org/downloads/">Download</a></u></p>
-                    <p>Linux</p>
-                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt-get install python3</code></pre></div>                
 
-                    <h3 class="highlight">Installing Packages (Python3)</h3>
-                    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>"><code class="language-powershell">pip3 install package_name</code></pre></div>
+        <p >Εμφανίζει ένα κείμενο στην οθόνη</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">print("GrCode Club")	</code></pre></div></div>
+        
+        <p >Διαβάζει data από το χρήστη.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">x=input("Name : ")
+y=int(input("Int : "))
+z=float(input("Float : "))</code></pre></div></div>
+
+        <p class="highlight">Επανάληψη</p>
+        <p>Η εντολή <code>for</code> επαναλαμβάνει ένα κομμάτι κώδικα για έναν ορισμένο αριθμό επαναλήψεων.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">for x in range(6):
+print(x)</code></pre></div></div>
     </div>
     <div id="addFooter"></div>
 </body>
