@@ -12,37 +12,37 @@
     <div class="container">
         <h1 class="title">Python - Συμβολοσειρές</h1>
 
-        <p>Η μέθοδος capitalize() κάνει το πρώτο γράμμα του string.</p>
+        <p>Η μέθοδος <code>capitalize()</code> κάνει το πρώτο γράμμα του string.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "grCode club"
 print(text.capitalize())  # Εκτύπωση: GrCode club</code></pre></div></div>
 
-        <p> Η μέθοδο title() κάνει capitalize κάθε πρώτο γράμμα κάθε λέξης στο string.</p>
+        <p> Η μέθοδο <code>title()</code> κάνει capitalize κάθε πρώτο γράμμα κάθε λέξης στο string.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "grCode club"
 print(text.title())  # Εκτύπωση: GrCode Club</code></pre></div></div>
 
-        <p>Η μέθοδος upper() επιστρέφει τη συμβολοσειρά με κεφαλαία γράμματα.</p>
+        <p>Η μέθοδος <code>upper()</code> επιστρέφει τη συμβολοσειρά με κεφαλαία γράμματα.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
 print(text.upper()) #Εκτύπωση 'GRCODE CLUB'</code></pre></div></div>
 
-        <p>Η μέθοδος lower() επιστρέφει τη συμβολοσειρά με πεζά γράμματα.</p>
+        <p>Η μέθοδος <code>lower()</code> επιστρέφει τη συμβολοσειρά με πεζά γράμματα.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
 print(text.lower()) #Εκτύπωση 'grcode club' </code></pre></div></div>
 
-        <p>Η μέθοδος strip() αφαιρεί οποιοδήποτε κενό διάστημα από την αρχή ή το τέλος.</p>
+        <p>Η μέθοδος <code>strip()</code> αφαιρεί οποιοδήποτε κενό διάστημα από την αρχή ή το τέλος.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text= "GrCode Club"
 print(text.strip()) #Εκτύπωση 'GrCode Club'</code></pre></div></div>
 
-        <p>Η μέθοδος swapcase() αλλάζει τα πεζά σε κεφαλαία και το αντίστροφο σε κάθε γράμμα του string.</p>
+        <p>Η μέθοδος <code>swapcase()</code> αλλάζει τα πεζά σε κεφαλαία και το αντίστροφο σε κάθε γράμμα του string.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text= "GrCode Club"
 print(text.swapcase())  # Εκτύπωση: gRcODE cLUB </code></pre></div></div> 
 
-        <p class="highlight">Multiline Strings</p>
+        <p>Multiline Strings</p>
         <p>Μπορείτε να χρησιμοποιήσετε 3 διπλά εισαγωγικά ή 3 μεμονωμένα αποσπάσματα:</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = """Η Python είναι μια αντικειμενοστραφής γλώσσα προγραμματισμού (object-oriented) 
@@ -52,7 +52,7 @@ print(text.swapcase())  # Εκτύπωση: gRcODE cLUB </code></pre></div></div
 προγραμματιστής ψάχνει για μια εύκολη στη χρήση γλώσσα"""
 print(text)</code></pre></div></div>
 
-        <p class="highlight">Οι συμβολοσειρές ως πίνακας</p>
+        <p>Οι συμβολοσειρές ως πίνακας</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
 print(text[0]) #Εκτύπωση 'G'
@@ -68,25 +68,25 @@ print(text[9]) #Εκτύπωση 'u'
 print(text[10]) #Εκτύπωση 'b'</code></pre></div></div>
 
 
-        <p class="highlight">Βρόχος και συμβολοσειρά</p>
+        <p>Βρόχος και συμβολοσειρά</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">for x in "GrCode Club":
 print(x)</code></pre></div></div>
 
 
-        <p class="highlight">Μήκος συμβολοσειράς </p>
+        <p>Μήκος συμβολοσειράς </p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
 print(len(text)) #Εκτύπωση 11</code></pre></div></div>
         
 
-        <p class="highlight">Ελέγξτε μια συμβολοσειρά </p>
-        <p>Για να ελέγξουμε εάν μια συγκεκριμένη φράση ή χαρακτήρας υπάρχει σε μια συμβολοσειρά, μπορούμε να χρησιμοποιήσουμε τη λέξη-κλειδί in.</p>
+        <p>Ελέγξτε μια συμβολοσειρά </p>
+        <p>Για να ελέγξουμε εάν μια συγκεκριμένη φράση ή χαρακτήρας υπάρχει σε μια συμβολοσειρά, μπορούμε να χρησιμοποιήσουμε τη λέξη-κλειδί <code>in</code>.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
 print("Gr" in text) #Εκτύπωση True</code></pre></div></div>
         
-        <p>Για να ελέγξουμε αν μια συγκεκριμένη φράση ή χαρακτήρας ΔΕΝ υπάρχει σε μια συμβολοσειρά, μπορούμε να χρησιμοποιήσουμε τη λέξη-κλειδί not in.</p>
+        <p>Για να ελέγξουμε αν μια συγκεκριμένη φράση ή χαρακτήρας ΔΕΝ υπάρχει σε μια συμβολοσειρά, μπορούμε να χρησιμοποιήσουμε τη λέξη-κλειδί <code>not in</code>.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
 print("Hello" not in text) #Εκτύπωση True</code></pre></div></div>
