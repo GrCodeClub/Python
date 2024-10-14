@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού Python | Είσοδος / Έξοδος">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Είσοδος / Έξοδος</h1>
+        <p class="highlight">Έξοδος (Output)</p>
+        <p><code>print()</code> Χρησιμοποιείται για να εμφανίσει δεδομένα στην κονσόλα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">print("GrCode Club")</code></pre></div></div>
+        <p>Μπορείς να εμφανίσεις πολλαπλές τιμές ή μεταβλητές με διαχωρισμό από κόμμα:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">name = "Νίκος"
+age = 25
+print("Το όνομα μου είναι", name, "και είμαι", age, "χρονών.")</code></pre></div></div>
+
+        <p class="highlight">Είσοδος (Input)</p>
+        <p>Η είσοδος από το χρήστη γίνεται κυρίως με τη χρήση με την εντολή <code>input()</code></p>
+        <p><code>input()</code>: Χρησιμοποιείται για να λαμβάνεις δεδομένα από τον χρήστη με τη μορφή κειμένου (string).</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">name = input("Ποιο είναι το όνομά σου; ")
+print("Γειά σου, " + name)</code></pre></div></div>
+        <p>Η τιμή που επιστρέφεται από την <code>input()</code> είναι πάντα string, οπότε αν χρειαστείς κάποια άλλη μορφή (π.χ., αριθμό), θα πρέπει να τη μετατρέψεις:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">age = int(input("Πόσο χρονών είσαι; "))
+print("Είσαι " + str(age) + " χρονών.")</code></pre></div></div>
+
+        <div id="addFooter"></div>
+</body>
+</html>
