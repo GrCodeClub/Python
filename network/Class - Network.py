@@ -1,6 +1,6 @@
 clas="."
 while clas!="-":
-    clas=input(" ΔΩΣΕ ΙΡ : ") 
+    clas=input(" ΔΩΣΕ ΙΡ : ")
     byt=[]
     def synart(x):
         if x>=0 and x<=127:
